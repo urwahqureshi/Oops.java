@@ -1,0 +1,36 @@
+class Car{
+    String make;
+    String model;
+    int year;
+    Car(String make , String model ,  int year){
+        this.make = make ;
+        this.model = model;
+        this.year = year;
+    }
+    public void startEngine(){
+        System.out.println("the engine is Started");
+    }
+}
+class ElectricCar extends Car{
+    int batterycapacity;
+    ElectricCar(String make ,String model , int year,int batterycapacity){
+        super(make,model,year);
+        this.batterycapacity=batterycapacity;
+    }
+    public void chargebattery(){
+        System.out.println("the battery is charging");
+    }
+
+    public class CarDetail{
+        public static void main(String[] args) {
+            ElectricCar car1 = new ElectricCar("toyota","daala",2024,100);
+            System.out.println("make" + car1.make);
+            System.out.println("model" + car1.model);
+            System.out.println("year" + car1.year);
+            System.out.println("batterycapacity" + car1.batterycapacity);
+            car1.startEngine();
+            car1.chargebattery();
+
+        }
+    }
+}
